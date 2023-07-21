@@ -98,7 +98,7 @@ export const featuredPortfolio = [
     },
     {
       id: 2,
-      title: "Mobile Rampa UI Design",
+      title: "Blog Website",
       img:
       process.env.PUBLIC_URL + "/assets/blog1.PNG",
       link: "https://blog-website5.netlify.app",
