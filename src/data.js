@@ -98,22 +98,24 @@ export const featuredPortfolio = [
     },
     {
       id: 2,
+      title: "Registration Form",
+      img:
+      process.env.PUBLIC_URL + "/assets/registration.PNG",
+      link: "https://registration-form02.netlify.app",
+    },
+    {
+      id: 3,
       title: "Blog Website",
       img:
       process.env.PUBLIC_URL + "/assets/blog1.PNG",
       link: "https://blog-website5.netlify.app",
     },
     {
-      id: 3,
-      title: "Mobile E-commerce Design",
-      img:
-        "https://cdn.dribbble.com/users/1998175/screenshots/15459384/media/48ac2b43ebe81ba0866afea1383cc939.png?compress=1&resize=1200x900",
-    },
-    {
       id: 4,
-      title: "Mobile Relax App",
+      title: "Rental Car App",
       img:
-        "https://cdn.dribbble.com/users/2083704/screenshots/15468619/media/cd958306c7a772449e1ac23bd65ce506.png?compress=1&resize=1200x900",
+      process.env.PUBLIC_URL + "/assets/blog2.PNG",
+      link: "https://blog-website5.netlify.app",
     },
     {
       id: 5,
