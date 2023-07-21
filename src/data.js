@@ -100,7 +100,8 @@ export const featuredPortfolio = [
       id: 2,
       title: "Mobile Rampa UI Design",
       img:
-        "https://cdn.dribbble.com/users/5920881/screenshots/15463142/media/b5a460223798bd85d835710806e2f3dd.png?compress=1&resize=1200x900",
+      process.env.PUBLIC_URL + "/assets/blog1.PNG",
+      link: "https://blog-website5.netlify.app",
     },
     {
       id: 3,
