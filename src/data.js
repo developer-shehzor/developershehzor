@@ -91,7 +91,7 @@ export const featuredPortfolio = [
   export const fullstack = [
     {
       id: 1,
-      title: "Blog Website",
+      title: "Blog App",
       img:
       process.env.PUBLIC_URL + "/assets/blog.PNG",
       link: "https://blog-website4.netlify.app",
