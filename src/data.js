@@ -105,29 +105,17 @@ export const featuredPortfolio = [
     },
     {
       id: 3,
+      title: "eShop Website",
+      img:
+      process.env.PUBLIC_URL + "/assets/eshop.PNG",
+      link: "https://eshop6.netlify.app",
+    },
+    {
+      id: 4,
       title: "Blog Website",
       img:
       process.env.PUBLIC_URL + "/assets/blog1.PNG",
       link: "https://blog-website5.netlify.app",
-    },
-    {
-      id: 4,
-      title: "Rental Car App",
-      img:
-      process.env.PUBLIC_URL + "/assets/blog2.PNG",
-      link: "https://blog-website5.netlify.app",
-    },
-    {
-      id: 5,
-      title: "Mobile Hero Design",
-      img:
-        "https://cdn.dribbble.com/users/26642/screenshots/15462545/media/1a202ef5c8338b6f78634e6edc1ba350.png?compress=1&resize=1200x900",
-    },
-    {
-      id: 6,
-      title: "Mobile Banking App",
-      img:
-        "https://cdn.dribbble.com/users/1387827/screenshots/15466426/media/deb2dca6762cd3610321c98bfccb0b72.png?compress=1&resize=1200x900",
     },
   ];
   
