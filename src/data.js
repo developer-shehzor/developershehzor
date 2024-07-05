@@ -117,6 +117,13 @@ export const featuredPortfolio = [
       process.env.PUBLIC_URL + "/assets/blog1.PNG",
       link: "https://blog-website5.netlify.app",
     },
+    {
+      id: 5,
+      title: "Chat App",
+      img:
+      process.env.PUBLIC_URL + "/assets/chat.PNG",
+      link: "https://chat-app03.netlify.app",
+    },
   ];
   
   export const designPortfolio = [

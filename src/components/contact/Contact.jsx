@@ -1,12 +1,41 @@
 import { useState } from "react";
 import "./contact.scss"
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const [message, setMessage] = useState(false)
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(true)
+
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_3irhzk7';
+    const templateId = 'template_5d5o93o';
+    const publicKey = 'Jt_X_ZX5NLAFVMtn8';
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'Dev Shehzor',
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setName('');
+        setEmail('');
+        setMessage('');
+        setEmailSent(true);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   }
 
   return (
@@ -17,10 +46,22 @@ function Contact() {
       <div className="right">
         <h2>Contact</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-          {message && <span>Thanks, I will reply ASAP :)</span>}
+          <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          />
+          <input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          />
+          <textarea placeholder="Message" value={message}
+          onChange={(e) => setMessage(e.target.value)}></textarea>
+          <button type="submit">Send Email</button>
+          {emailSent && <p>Your email has been sent!</p>}
         </form>
       </div>
     </div>
